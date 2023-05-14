@@ -55,42 +55,83 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
-
+Step-1: Create module encoder and decoder.
+Step-2: Get inputs and outputs for encoders and decoders.
+Step-3: Perform or operation for encoder and logic for decoders.
+Step-4: Perform RTL LOGIC and get waveform.
+Step-5: End the module.
 
 
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+
+ENCODER
+
+module EX7 (a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a,b,c;
+or (a,d4,d5,d6,d7);
+or (b,d2,d3,d6,d7);
+or (c,d1,d3,d5,d7);
+
+DECODER
+
+module EX7 (d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c0;
+assign d5 = (a&~b&~c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+end module 
+
+
+Developed by: HARINI.E 
+RegisterNumber:  212222050017
 */
-
-
-
 
 
 
 ### RTL LOGIC  
 
+ENCODER
+
+![RTL encoder](https://github.com/HariniEEE/Experiment-08-Encoders-and-decoders-/assets/128949246/75173823-fd44-46e9-a08b-974dc3d8feca)
 
 
+DECODER
 
-
-
+![RTL decoder](https://github.com/HariniEEE/Experiment-08-Encoders-and-decoders-/assets/128949246/2d652c65-5cdd-49c2-8e7b-e47aa58d0ece)
 
 
 ### TIMING DIGRAMS  
 
+ENCODER
 
+![Timing encoder](https://github.com/HariniEEE/Experiment-08-Encoders-and-decoders-/assets/128949246/bdb8c974-821a-4006-b2d0-a33e0839aa00)
+
+DECODER
+
+![Timing decoder](https://github.com/HariniEEE/Experiment-08-Encoders-and-decoders-/assets/128949246/b59637a0-65ee-476b-8294-7526fa0b22ba)
 
 
 
 ### TRUTH TABLE 
 
+ENCODER 
 
+![TT encoder](https://github.com/HariniEEE/Experiment-08-Encoders-and-decoders-/assets/128949246/86ffa5c1-58e5-4488-99e4-893de2a2da8c)
 
+DECODER
 
+![TT decoder](https://github.com/HariniEEE/Experiment-08-Encoders-and-decoders-/assets/128949246/053a572a-b73e-4267-bda7-87a7df1bc1fc)
 
 
 ### RESULTS 
+Thus the program to design encoder and decoder is completed.
+
